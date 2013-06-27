@@ -1,0 +1,16 @@
+<%= @microposts.each do |micropost| %>
+<li>
+  <p class="comment_body">"<%= micropost.body %>"</p>
+  <br/>
+  <p class="comment_info"><%= micropost.name %> - <%= time_ago_in_words(comment.created_at) %> ago </p>
+</li>
+<% end %>
+
+
+<ul class="microposts">
+  <% if @post.microposts.empty? %>
+    <li>none yet</li>
+  <% else %>
+    <%= render 'microposts' %>
+  <% end %>
+</ul>

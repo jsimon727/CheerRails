@@ -1,0 +1,26 @@
+<div class="login">
+  <img src="<%= asset_path( 'cheerlogo2.png' ) %>"> 
+  <p>Cheer Highlights is a community where you can share and vote on your favorite cheerleading videos, photos, and product reviews!</p>
+  <div id="login-content"> 
+    <% unless user_signed_in? %> 
+      <%= form_for("user", :url => user_session_path) do |f| %> 
+        <%= f.label :username %> <br/> 
+        <%= f.text_field :username , :size=>'15',:maxlength=>'32' %> <br/> 
+        <%= f.label :password %> <br/> 
+        <%= f.password_field :password , :size=>'15', :maxlength=>'32' %> 
+        <br/>
+        <br />
+        <div class="button"> 
+        <%= f.submit "Sign in" %> <br />
+        </div>
+  </div>
+         <br /> 
+        <%= link_to "Forgot your password?", new_password_path('user')  %>
+        <p class="signup"> <%= link_to "Sign-Up", users_path%> </p>
+      <% end %> 
+    <% end %>
+    <% if user_signed_in? %>
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+    <% end %> 
+ 
+</div>

@@ -1,0 +1,37 @@
+ <%= render "shared/menu" %>
+
+ <div class="photospage">
+
+
+<div class= "photoslogo">
+ <img src= "<%= asset_path( 'photoslogo.png' ) %>"> 
+</div>
+
+
+
+
+<%= form_for @media, :url => media_path, :html => { :multipart => true } do |form| %>
+  <%= hidden_field_tag(:user_id, current_user.id) %>
+  <%= form.file_field :pic %>
+ <p class="button"><%= form.submit %></p>
+
+
+ <% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+  </div>  
+<% else %>
+
+    <%= link_to "Sign up now!", user_new_path, 
+                                class: "btn btn-large btn-primary" %>
+  </div>
+<% end %> 
+
+
+<% end %>
+
+</div>
