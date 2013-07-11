@@ -1,12 +1,16 @@
-<h1>User#index</h1>
-
 <%= render "shared/menu" %>
 
 <body>
 
+  <div class="menusymbol">
+    <a href="#">&#9776</a>
+  </div>
+
   <div class="middle">
     <%= render 'signin_form' %>
   </div>
+
+
     
 
 
@@ -37,19 +41,19 @@
       <div class="info">
 
         <div class="paragraph1">
-          <img src= "<%= asset_path( 'videosicon.png' ) %>"> <p> Share your favorite Youtube cheer videos of all time. Vote on your favorite videos!</p>
+          <img src= "<%= asset_path( 'videosicon.png' ) %>"> <p>Post cheerleading Youtube videos and vote on your favorites!</p>
         </div>
 
         <div class="paragraph2">
-          <img src="<%= asset_path( 'photosicon.png' ) %>"> <p> Upload cheerleading photos of yourself, your friends, or your favorite teams! Users can vote on, which videos they think are the best. </p>
+          <img src="<%= asset_path( 'photosicon.png' ) %>"> <p>Upload cheerleading photos of yourself, your friends, or your favorite teams! Users can vote and comment on the best photos.</p>
         </div>
 
         <div class="paragraph3">
-          <img src="<%= asset_path( 'producticon.png' ) %>"> <p> Write and read product reviews about the products you use for cheerleading.</p>
+          <img src="<%= asset_path( 'producticon.png' ) %>"> <p>Read and write product reviews about the items you use for cheerleading.</p>
         </div>
 
         <div class="paragraph4">
-          <img src="<%= asset_path( 'profileicon.png' ) %>"> <p> Make a profile that tracks your skill progression as well as your top picture, video, and product review selections.</p>
+          <img src="<%= asset_path( 'profileicon.png' ) %>"> <p> Make a profile that keeps track of your skill progression as well as your top picture, video, and product review selections.</p>
         </div>
 
       </div>

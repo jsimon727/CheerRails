@@ -38,7 +38,7 @@ class UserController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(params[:user])
+    @user = User.new(params[:id])
 
     respond_to do |format|
       if @user.save
@@ -54,7 +54,7 @@ class UserController < ApplicationController
   # PUT /users/1
   # PUT /users/1.json
   def update
-    @user = User.find(params[:id])
+    @user = User.find(params[:user])
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
@@ -70,7 +70,7 @@ class UserController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    @user = User.find(params[:id])
+    @user = User.find(params[:user])
     @user.destroy
 
     respond_to do |format|

@@ -1,5 +1,9 @@
 <h1>Media#show</h1>
 
+<%= image_tag @media.pic.url %>
+<%= image_tag @media.pic.url(:medium) %>
+<%= image_tag @media.pic.url(:thumb) %>
+
 
 <%= render 'microposts' %>
 

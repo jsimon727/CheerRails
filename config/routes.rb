@@ -1,30 +1,45 @@
 CheerHighlights::Application.routes.draw do
 
+  get "microposts/show"
+
   get "microposts/index"
 
-  get "microposts/create"
+  get "microposts/edit"
 
-  get "microposts/destroy"
+  get "microposts/new"
+
+  # get "skills/index"
+
+  # get "microposts/index"
+
+  # get "microposts/create"
+
+  # get "microposts/show"
+  
+  # match '/new', to: 'microposts#new'
+
+  # get "microposts/destroy"
 
 
   root :to => 'user#index', :as => "root"
 
-  devise_for :users
+  devise_for :users , :skip => 'invitation'
+
+  resources :users
+  get "user/_profile", :as => "profile"
 
   resources :media
   resources :microposts
 
 
-  get "user/index"
+  # get "user/index"
 
-  get "user/show"
+  # get "user/show"
 
-  get '/users'=> 'user#new'
+  # get '/users'=> 'user#new'
 
-  resources :users
   
-  resources :sessions,   only: [:new, :create, :destroy]
-  resources :microposts, only: [:create, :destroy]
+
 
 
   # The priority is based upon order of creation:
