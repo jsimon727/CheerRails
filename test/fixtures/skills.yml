@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  skill: MyString
+  rating: MyString
+  comments: MyText
+
+two:
+  skill: MyString
+  rating: MyString
+  comments: MyText

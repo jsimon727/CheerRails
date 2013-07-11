@@ -1,0 +1,36 @@
+<%= render "shared/menu" %>
+
+<body class="profile">
+
+<div class= "photoslogo">
+ <img src= "<%= asset_path( 'photoslogo.png' ) %>"> 
+</div>
+
+<%= form_for @microposts, :html => { :multipart => true } do |f| %>
+  <div><%= f.file_field :avatar %>
+      <%= f.text_area :content, placeholder: "New comment..." %> 
+  </div>
+
+  <% if @microposts.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@micropost.errors.count, "error") %> prohibited this micropost from being saved:</h2>
+
+      <ul>
+      <% @microposts.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="button">
+    <%= f.submit "Create Post" %>
+  </div>
+<% end %>
+
+<ul>
+  <li>
+    <span class="content"><%= @microposts.content %></span>
+
+  </li>
+</ul>

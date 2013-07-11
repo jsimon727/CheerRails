@@ -1,0 +1,15 @@
+<%= render "shared/menu" %>
+
+
+<body class="profile">
+
+<div class= "photoslogo">
+ <img src= "<%= asset_path( 'photoslogo.png' ) %>"> 
+</div>
+
+<%= @micropost.content %>
+  <%= image_tag @micropost.avatar.url(:medium) %>
+
+  <%= link_to "Delete", micropost_path(@micropost.id), :method => :delete, title: @micropost.content %>
+  <%= link_to "New", micropost_path(@micropost.id), :method => :new, title: @micropost.content %>
+<%# end %>
