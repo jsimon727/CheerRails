@@ -1,5 +1,13 @@
 CheerHighlights::Application.routes.draw do
 
+  get "skills/index"
+
+  get "skills/edit"
+
+  get "skills/new"
+
+  get "skills/show"
+
   get "microposts/show"
 
   get "microposts/index"
@@ -30,6 +38,7 @@ CheerHighlights::Application.routes.draw do
 
   resources :media
   resources :microposts
+  resources :skills
 
 
   # get "user/index"

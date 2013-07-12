@@ -1,0 +1,76 @@
+<body class="profile">
+  <%= render "shared/menu" %>
+  
+  <div class="profilemiddle">
+  <% if user_signed_in? %>
+  <h1>Hi, <%= current_user.firstname %>!</h1>
+<% end %>
+
+<body>
+
+
+<div class="myskills">
+<h1>My Skills</h1>
+
+<div class="tumbling">
+<h2>Tumbling</h2>
+<hr>
+
+<%= link_to 'Add New Skill', new_skill_path %>
+
+<br>
+
+<div class= "skillstable">
+<% @skills.each do |skill| %>
+  <ul><tr>
+    <li><td><%= skill.skill %> <%= link_to 'Edit', edit_skill_path(skill) %> <%= link_to 'Delete', skill, method: :delete, data: { confirm: 'Are you sure?' } %></td></li>
+  </tr></ul>
+<% end %>
+</table>
+</div>
+
+
+</div>
+
+<div class="stunting">
+  <h2>Stunting</h2>
+  <hr>
+
+  <%= link_to 'Add New Skill', new_skill_path %>
+
+  <br>
+
+  <div class= "skillstable">
+    <% @skills.each do |skill| %>
+      <ul><tr>
+        <li><td><%= skill.skill %> 
+      <%= link_to 'Edit', edit_skill_path(skill) %> 
+      <%= link_to 'Delete', skill, method: :delete, data: { confirm: 'Are you sure?' } %></td></li>
+      </tr></ul>
+  <% end %>
+  </table>
+  </div>
+
+
+</div>
+
+</div>
+
+<div class="myfeed">
+<h1>My Feed</h1>
+<p> Congrats, you've recently added these skills: 
+
+  <% @skills.each do |skill| %>
+  <ul>
+    <li><%= skill.skill %></li>
+  </ul>
+</p>
+  <% end %>
+
+</div>
+
+</body>
+
+
+</body>
+

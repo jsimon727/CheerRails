@@ -1,31 +1,13 @@
-<div>
-  <h2>My Skills</h2>
-  <ul>
-  <% @skills.each do |skill| %>
-    <li>
-        Skill: <%= skill.user.skill %><br>
-        Rating: <%= skill.user.rating %><br>
-        Comments: <%= skill.comments %><br>
-    </li>
-  </ul>
-  <% end %>
+<body class="profile">
 
-
-     <p>
-      <%=f.label :skills %><br />
-      <%=f.text_field :skills %>
-    </p>
-    <p>
-      <%=f.label :rating %><br />
-      <%=f.text_field :rating %>
-    </p>
-    <p>
-      <%=f.label :comments %><br />
-      <%=f.text_field :comments %>
-    </p>
-
-    <p class="button"><%= f.submit %></p> 
-
-
-
+<div class= "profilelogo">
+ <img src= "<%= asset_path( 'profilelogo.png' ) %>"> 
 </div>
+
+<%= render 'profile' %>
+
+
+<br />
+
+
+</body>

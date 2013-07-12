@@ -6,6 +6,7 @@
  <img src= "<%= asset_path( 'photoslogo.png' ) %>"> 
 </div>
 
+<div class="newmicropost">
 <%= form_for @microposts, :html => { :multipart => true } do |f| %>
   <div><%= f.file_field :avatar %>
       <%= f.text_area :content, placeholder: "New comment..." %> 
@@ -26,11 +27,5 @@
   <div class="button">
     <%= f.submit "Create Post" %>
   </div>
+</div>
 <% end %>
-
-<ul>
-  <li>
-    <span class="content"><%= @microposts.content %></span>
-
-  </li>
-</ul>

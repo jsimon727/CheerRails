@@ -1,15 +1,13 @@
 <div>
   <h2>My Skills</h2>
   <ul>
-  <% @skills.each do |skill| %>
+  <%= @skills.content %>
     <li>
         Skill: <%= skill.user.skill %><br>
         Rating: <%= skill.user.rating %><br>
         Comments: <%= skill.comments %><br>
     </li>
   </ul>
-  <% end %>
-
 
      <p>
       <%=f.label :skills %><br />
@@ -24,8 +22,6 @@
       <%=f.text_field :comments %>
     </p>
 
-    <p class="button"><%= f.submit %></p> 
-
-
+    <p class="button"><%= f.submit %></p>
 
 </div>

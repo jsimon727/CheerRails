@@ -2,10 +2,10 @@
 
 one:
   skill: MyString
-  rating: MyString
-  comments: MyText
+  comment: MyText
+  rating: 1
 
 two:
   skill: MyString
-  rating: MyString
-  comments: MyText
+  comment: MyText
+  rating: 1

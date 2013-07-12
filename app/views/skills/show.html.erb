@@ -1,0 +1,13 @@
+<%= render "shared/menu" %>
+
+
+<body class="profile">
+
+<div class= "profilelogo">
+ <img src= "<%= asset_path( 'profilelogo.png' ) %>"> 
+</div>
+
+<%= @skill.skill %>
+
+  <%= link_to "Delete", skill_path, :method => :delete, title: @skill.skill %>
+  <%= link_to "New", new_skill_path, :method => :new, title: @skill.skill %>
