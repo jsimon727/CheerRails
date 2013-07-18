@@ -9,14 +9,6 @@
 <%= form_for @skills, :html => { :multipart => true } do |f| %>
   <div class="newskill">
     <%= f.text_field :skill, placeholder: "New skill..." %> 
-      <p>Rating: 
-      <select>
-        <option>1</option>
-        <option>1</option>
-        <option>1</option>
-        <option>1</option>
-        <option>1</option>
-      </select></p>
     <div class="button">
       <%= f.submit "Add Skill" %>
     </div>
